@@ -2,12 +2,63 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta name="title" content="Городские ремонты - Официальный сайт">
+        <meta name="description" content="Ремонты квартир и домов на КМВ. Под ключ и не только.">
+        <title>{% block title %}Городские ремонты - Официальный сайт{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('bundles/app/css/main.css') }}" rel="stylesheet" />
+            <link href="{{ asset('bundles/app/js/poshytip/src/tip-skyblue/tip-skyblue.css') }}" rel="stylesheet" />
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        {% block javascripts %}
+            <script src="{{ asset('bundles/app/js/jquery-1.11.3.min.js') }}"></script>
+            <script src="{{ asset('bundles/app/js/jquery.maskedinput.min.js') }}"></script>
+            <script src="{{ asset('bundles/app/js/poshytip/src/jquery.poshytip.min.js') }}"></script>
+            <script src="{{ asset('bundles/app/js/main.js') }}"></script>
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <div class="content">
+            {% block body %}{% endblock %}
+        </div>
+        <div class="counters" style="display: none;">
+            <!-- Yandex.Metrika informer -->
+            <a href="https://metrika.yandex.ru/stat/?id=25089257&from=informer"
+               target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/25089257/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+                                                   style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:25089257,lang:'ru'});return false}catch(e){}"/></a>
+            <!-- /Yandex.Metrika informer -->
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+                var yaParams = {/*Здесь параметры визита*/};
+            </script>
+
+            <script type="text/javascript">
+                (function (d, w, c) {
+                    (w[c] = w[c] || []).push(function() {
+                        try {
+                            w.yaCounter25089257 = new Ya.Metrika({id:25089257,
+                                webvisor:true,
+                                clickmap:true,
+                                trackLinks:true,
+                                accurateTrackBounce:true,params:window.yaParams||{ }});
+                        } catch(e) { }
+                    });
+
+                    var n = d.getElementsByTagName("script")[0],
+                            s = d.createElement("script"),
+                            f = function () { n.parentNode.insertBefore(s, n); };
+                    s.type = "text/javascript";
+                    s.async = true;
+                    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+                    if (w.opera == "[object Opera]") {
+                        d.addEventListener("DOMContentLoaded", f, false);
+                    } else { f(); }
+                })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="//mc.yandex.ru/watch/25089257" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        </div>
     </body>
 </html>

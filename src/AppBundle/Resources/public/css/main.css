@@ -1,0 +1,478 @@
+@font-face {
+	font-family: HelveticaNeueCyr-Black;
+	src: url("../fonts/Helvetica/HelveticaNeueCyr-Black.otf");
+}
+
+@font-face {
+	font-family: HelveticaNeueCyr-Light;
+	src: url("../fonts/Helvetica/HelveticaNeueCyr-Light.otf");
+}
+
+@font-face {
+	font-family: HelveticaNeueCyr-BlackItalic;
+	src: url("../fonts/Helvetica/HelveticaNeueCyr-BlackItalic.otf");
+}
+
+@font-face {
+	font-family: HelveticaNeueCyr-Bold;
+	src: url("../fonts/Helvetica/HelveticaNeueCyr-Bold.otf");
+}
+
+@font-face {
+	font-family: HelveticaNeueCyr-BoldItalic;
+	src: url("../fonts/Helvetica/HelveticaNeueCyr-BoldItalic.otf");
+}
+
+@font-face {
+	font-family: HelveticaNeueCyr-Italic;
+	src: url("../fonts/Helvetica/HelveticaNeueCyr-Italic.otf");
+}
+
+@font-face {
+	font-family: HelveticaNeueCyr-LightItalic;
+	src: url("../fonts/Helvetica/HelveticaNeueCyr-LightItalic.otf");
+}
+
+@font-face {
+	font-family: HelveticaNeueCyr-Medium;
+	src: url("../fonts/Helvetica/HelveticaNeueCyr-Medium.otf");
+}
+
+@font-face {
+	font-family: HelveticaNeueCyr-Roman;
+	src: url("../fonts/Helvetica/HelveticaNeueCyr-Roman.otf");
+}
+
+@font-face {
+	font-family: HelveticaNeueCyr-Thin;
+	src: url("../fonts/Helvetica/HelveticaNeueCyr-Thin.otf");
+}
+
+@font-face {
+	font-family: HelveticaNeueCyr-ThinItalic;
+	src: url("../fonts/Helvetica/HelveticaNeueCyr-ThinItalic.otf");
+}
+
+@font-face {
+	font-family: HelveticaNeueCyr-UltraLight;
+	src: url("../fonts/Helvetica/HelveticaNeueCyr-UltraLight.otf");
+}
+
+@font-face {
+	font-family: HelveticaNeueCyr-UltraLightItalic;
+	src: url("../fonts/Helvetica/HelveticaNeueCyr-UltraLightItalic.otf");
+}
+
+@font-face {
+	font-family: MyriadPro-Bold;
+	src: url("../fonts/MyriadPro/MyriadPro-Bold.otf");
+}
+
+@font-face {
+	font-family: MyriadPro-BoldCond;
+	src: url("../fonts/MyriadPro/MyriadPro-BoldCond.otf");
+}
+
+@font-face {
+	font-family: MyriadPro-BoldCondIt;
+	src: url("../fonts/MyriadPro/MyriadPro-BoldCondIt.otf");
+}
+
+@font-face {
+	font-family: MyriadPro-BoldIt;
+	src: url("../fonts/MyriadPro/MyriadPro-BoldIt.otf");
+}
+
+@font-face {
+	font-family: MyriadPro-Cond;
+	src: url("../fonts/MyriadPro/MyriadPro-Cond.otf");
+}
+
+@font-face {
+	font-family: MyriadPro-CondIt;
+	src: url("../fonts/MyriadPro/MyriadPro-CondIt.otf");
+}
+
+@font-face {
+	font-family: MyriadPro-It;
+	src: url("../fonts/MyriadPro/MyriadPro-It.otf");
+}
+
+@font-face {
+	font-family: MyriadPro-Regular;
+	src: url("../fonts/MyriadPro/MyriadPro-Regular.otf");
+}
+
+@font-face {
+	font-family: MyriadPro-Semibold;
+	src: url("../fonts/MyriadPro/MyriadPro-Semibold.otf");
+}
+
+body {
+	background: #ccc;
+	font-family: MyriadPro-Regular;
+}
+
+.content {
+	width: 1248px;
+	margin: 0 auto;
+}
+
+.headerGr {
+	background: url("../images/header_bg.png") no-repeat;
+	width: 1248px;
+	height: 164px;
+}
+
+.headerGr div{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.headerGr p {
+	margin: 0;
+	padding: 0;
+}
+
+.headerLogo {
+	background: url("../images/headerLogo.png") no-repeat;
+	width: 76px;
+	height: 76px;
+	margin: 45px 0 45px 40px;
+}
+
+.headerLogoText {
+	margin: 47px 0;
+	font-size: 26px;
+	color: #fff;
+}
+
+.headerText {
+	margin: 50px 0;
+	font-size: 24px;
+	font-weight: bold;
+	color: #fabf00;
+	text-align: center;
+	padding-left: 140px;
+}
+
+.headerContacts {
+	margin: 0 0 0 140px;
+}
+
+.headerContactsUl li{
+	list-style: none;
+	margin: 10px 0;
+}
+
+.headerContactsUl li a {
+	margin-left: 5px;
+	text-align: left;
+	display: inline-block;
+}
+
+.headerContactsPhone {
+	background: url("../images/headerContactsPhone.png") no-repeat;
+	width: 36px;
+	height: 36px;
+}
+
+.headerContactsEmail {
+	background: url("../images/headerContactsEmail.png") no-repeat;
+	width: 36px;
+	height: 36px;
+}
+
+.headerContactsAddress {
+	background: url("../images/headerContactsAddress.png") no-repeat;
+	width: 36px;
+	height: 36px;
+}
+
+.headerContactsPhoneText, .headerContactsEmailText{
+	line-height: 36px;
+}
+
+.headerContactsPhoneText {
+	line-height: 36px;
+	font-size: 24px;
+	color: #fabf00;
+}
+
+.headerContactsEmailText{
+	color: #fff;
+}
+
+.headerContactsAddressText {
+	color: #fff;
+	line-height: 14px;
+	font-size: 14px;
+	margin: 5px 0 0 0;
+}
+
+.feedbackBlock {
+	height: 455px;
+	background: #fff;
+}
+
+.feedbackChildBlock {
+	height: 235px;
+	padding: 60px 10px 0 50px;
+	margin: 0;
+}
+
+.feedbackChildBlock div{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.feedbackTextBlock {
+	width: 750px;
+	font-size: 48px;
+	font-weight: bold;
+	color: #7f7268;
+	padding-top: 60px;
+}
+
+.feedbackSendButton {
+	width: 317px;
+	background: #65996f;
+	height: 60px;
+	margin: 40px 0 0 0;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+	cursor: pointer;
+	border: none;
+}
+
+.feedbackFormDiv {
+	width: 320px;
+	height: 260px;
+	background: url("../images/feedbackFormBlock.png") no-repeat;
+	margin: 0 0 0 100px;
+}
+
+.feedbackFormHeadText {
+	font-size: 24px;
+	font-weight: bold;
+	color: #fff;
+	margin: 25px 0 0 35px;
+}
+
+.smetaFormHeadText {
+	font-size: 24px;
+	font-weight: bold;
+	color: #fff;
+	padding: 25px 0 0 35px;
+}
+
+.feedbackFormHeadText p {
+	font-size: 11px;
+	font-weight: normal;
+	margin: 0 0 0 1px;
+}
+
+.smetaFormHeadText p {
+	font-size: 11px;
+	font-weight: normal;
+	margin: 0 0 0 1px;
+}
+
+.feedbackItemDiv {
+	color: #fff;
+	font-size: 18px;
+	margin: 20px 0 0 10px;
+}
+
+.feedbackItemDiv input{
+	border-radius: 5px;
+	font-size: 20px;
+	width: 200px;
+	margin: 0 0 0 10px;
+}
+
+.feedbackForm {
+	margin: 40px 0 0 0;
+}
+
+.feedbackCallbackText {
+	font-size: 16px;
+	color: #fff;
+	margin: 30px 0 0 0;
+	text-align: center;
+}
+
+.whatToDoBlock {
+	background: url("../images/whatToDoBg.png") no-repeat;
+	padding: 50px 0 50px 120px;
+}
+
+.whatToDo {
+	height: 532px;
+	background: url("../images/whatToDo.png") no-repeat;
+}
+
+.babaBlock {
+	height: 650px;
+	background: url("../images/baba.png") no-repeat;
+}
+
+.badWorkBg {
+	height: 625px;
+	background: url("../images/badWorkBg.png") no-repeat;
+}
+
+.badWorkBgIconsDiv {
+	width: 1000px;
+	height: 525px;
+	padding: 50px 124px;
+}
+
+.badWorkBgIcon {
+	display: inline-block;
+	vertical-align: top;
+	margin: 5px 56px;
+}
+
+.badWorkBgIconImage {
+	display: block;
+	width: 132px;
+	height: 132px;
+}
+
+.badWorkBgIcon_1 {
+	background: url("../images/badWorkIcon_1.png") no-repeat;
+}
+
+.badWorkBgIcon_2 {
+	background: url("../images/badWorkIcon_2.png") no-repeat;
+}
+
+.badWorkBgIcon_3 {
+	background: url("../images/badWorkIcon_3.png") no-repeat;
+}
+
+.badWorkBgIcon_4 {
+	background: url("../images/badWorkIcon_4.png") no-repeat;
+}
+
+.badWorkBgIcon_5 {
+	background: url("../images/badWorkIcon_5.png") no-repeat;
+}
+
+.badWorkBgIcon_6 {
+	background: url("../images/badWorkIcon_6.png") no-repeat;
+}
+
+.badWorkBgIcon_7 {
+	background: url("../images/badWorkIcon_7.png") no-repeat;
+}
+
+.badWorkBgIcon_8 {
+	background: url("../images/badWorkIcon_8.png") no-repeat;
+}
+
+.badWorkBgIcon_9 {
+	background: url("../images/badWorkIcon_9.png") no-repeat;
+}
+
+.badWorkBgIcon_10 {
+	background: url("../images/badWorkIcon_10.png") no-repeat;
+}
+
+.badWorkBgIcon_11 {
+	background: url("../images/badWorkIcon_11.png") no-repeat;
+}
+
+.badWorkBgIcon_12 {
+	background: url("../images/badWorkIcon_12.png") no-repeat;
+}
+
+.goodWorkerBlock {
+	height: 650px;
+	background: url("../images/goodWorker.png") no-repeat;
+}
+
+.badWorkBgIcon p {
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	max-width: 130px;
+}
+
+.searchGoodWork {
+	height: 653px;
+	background: url("../images/searchGoodWork.png") no-repeat;
+}
+
+.kuDyadyaKolya {
+	height: 590px;
+	background: url("../images/kumDyadyaKolya.png") no-repeat;
+}
+
+.kuDyadyaKolyaBlock {
+	background: #fff;
+	padding: 50px 0 0 28px;
+}
+
+.realExampleBlock {
+	height: 743px;
+	background: url("../images/realExample.png") no-repeat;
+}
+
+.bigLogoBlock {
+	height: 826px;
+	background: url("../images/bigLogoBlock.png") no-repeat;
+}
+
+.objectsBlock {
+	height: 638px;
+	background: url("../images/objectsBlock.png") no-repeat;
+}
+
+.forExampleBlock {
+	height: 659px;
+	background: url("../images/forExampleBlock.png") no-repeat;
+}
+
+.managerBlock {
+	height: 669px;
+	background: url("../images/managerBlock.png") no-repeat;
+}
+
+.ourTeamBlock {
+	height: 800px;
+	background: url("../images/ourTeamBlock.png") no-repeat;
+}
+
+.ourWorkBlock {
+	height: 672px;
+	background: url("../images/ourWork.png") no-repeat;
+}
+
+.discountCardBlock {
+	height: 650px;
+	background: url("../images/discountCard.png") no-repeat;
+}
+
+.ourAddressMapBlock {
+	height: 572px;
+	background: url("../images/ourAddressMap.png") no-repeat;
+}
+
+.smetaBlockBg {
+	height: 458px;
+	background: url("../images/smetaBlockBg.png") no-repeat;
+}
+
+.freeConsultBg {
+	height: 458px;
+	background: url("../images/freeConsultBg.png") no-repeat;
+}
+
+.footerBgBlock {
+	height: 780px;
+	background: url("../images/footerBg.png") no-repeat;
+}

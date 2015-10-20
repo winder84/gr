@@ -1,0 +1,206 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+	<div class="headerGr">
+		<div class="headerLogo"></div>
+		<div class="headerLogoText">Городские <br />ремонты</div>
+		<div class="headerText" property="schema:headTitle" id="headTitle">{{ headBlock.headTitle|raw }}</div>
+		<div class="headerContacts">
+			<ul class="headerContactsUl">
+				<li>
+					<div class="headerContactsPhone"></div>
+					<a class="headerContactsPhoneText"><div property="schema:headPhone">{{ headBlock.headPhone }}</div></a>
+				</li>
+				<li>
+					<div class="headerContactsEmail"></div>
+					<a class="headerContactsEmailText"><div property="schema:headEmail">{{ headBlock.headEmail }}</div></a>
+				</li>
+				<li>
+					<div class="headerContactsAddress"></div>
+					<a class="headerContactsAddressText"><div property="schema:headAddress">{{ headBlock.headAddress|raw }}</div></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="feedbackBlock">
+		<div class="feedbackChildBlock">
+			<div class="feedbackTextBlock">
+				ВЫ МОЖЕТЕ ОСТАВИТЬ ЗАЯВКУ И ПОЛУЧИТЬ БЕСПЛАТНУЮ СМЕТУ В ТЕЧЕНИИ ОДНОГО РАБОЧЕГО ДНЯ
+			</div>
+			<div class="feedbackFormDiv">
+				<div class="feedbackFormHeadText">
+					ОСТАВИТЬ ЗАЯВКУ
+				</div>
+				<form class="feedbackForm" method="post">
+					<input hidden="hidden" style="display: none;" name="feedbackAction" value="request">
+					<div class="feedbackItemDiv">
+						<label>Имя:</label>
+						<input type="text" maxlength="18" name="feedbackName" id="feedbackName">
+					</div>
+					<div class="feedbackItemDiv">
+						<label>Тел:</label>
+						<input type="text" maxlength="20" name="feedbackPhone" class="feedbackPhone" id="feedbackPhone" style="margin-left: 15px;">
+					</div>
+					<button type="submit" class="feedbackSendButton" value="ОТПРАВИТЬ" onsubmit="yaCounter25089257.reachGoal('CLICK_UTP'); return true;">ОТПРАВИТЬ</button>
+				</form>
+				<div class="feedbackCallbackText">
+					Введите имя и телефон и мы перезвоним Вам в течении 5 минут.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="whatToDoBlock">
+		<div class="whatToDo"></div>
+	</div>
+	<div class="babaBlock"></div>
+	<div class="badWorkBg">
+		<div class="badWorkBgIconsDiv">
+			<div class="badWorkBgIcon">
+				<a class="badWorkBgIconImage badWorkBgIcon_1" title="Зачастую конечная цена на услуги и товары значительно превышает начальную."></a>
+				<p>УДОРОЖАНИЕ СМЕТЫ</p>
+			</div>
+			<div class="badWorkBgIcon">
+				<a class="badWorkBgIconImage badWorkBgIcon_2" title="Рабочие сделали легкую работу и исчезли, озадачив Вас поиском новых рабочих для завершения ремонта."></a>
+				<p>НЕДОДЕЛЫВАНИЕ РАБОТ</p>
+			</div>
+			<div class="badWorkBgIcon">
+				<a class="badWorkBgIconImage badWorkBgIcon_3" title="В большинстве случаев наемные рабочие не имеют договора или имеют шаблонный, который не гарантирует ничего."></a>
+				<p>ШАБЛОННЫЙ ДОГОВОР ИЛИ ЕГО ОТСУТСТВИЕ</p>
+			</div>
+			<div class="badWorkBgIcon">
+				<a class="badWorkBgIconImage badWorkBgIcon_4" title="Рабочие нарушают технологические процессы от незнания или с целью закончить ремонт как можно скорее"></a>
+				<p>НАРУШЕНИЕ ТЕХНОЛОГИЙ</p>
+			</div>
+			<div class="badWorkBgIcon">
+				<a class="badWorkBgIconImage badWorkBgIcon_5" title="Рабочие пользуются Вашим незнанием строительных норм и правил (СНиП) для избежания ответственности за качество работ."></a>
+				<p>ДИЛЕТАНТЫ</p>
+			</div>
+			<div class="badWorkBgIcon">
+				<a class="badWorkBgIconImage badWorkBgIcon_6" title='"Широкополупрофильный" специалист выполняет все виды работ, при этом разбираясь в каждой из них весьма поверхностно.'></a>
+				<p>ПЕРЕРАСХОД</p>
+			</div>
+			<div class="badWorkBgIcon">
+				<a class="badWorkBgIconImage badWorkBgIcon_7" title="Одна бригада работает на нескольких объектах. Это приводит к простоям и увеличению сроков."></a>
+				<p>УНИВЕРСАЛЬНЫЙ СОЛДАТ</p>
+			</div>
+			<div class="badWorkBgIcon">
+				<a class="badWorkBgIconImage badWorkBgIcon_8" title="Одна бригада работает на нескольких объектах. Это приводит к простоям и увеличению сроков."></a>
+				<p>СРЫВ СРОКОВ</p>
+			</div>
+			<div class="badWorkBgIcon">
+				<a class="badWorkBgIconImage badWorkBgIcon_9" title="В большинстве случаев перед началом работ с Вас берут аванс, что не является гарантией, что к ремонту кто-нибудь вообще приступит."></a>
+				<p>ИСЧЕЗАЮЩИЙ АВАНС</p>
+			</div>
+			<div class="badWorkBgIcon">
+				<a class="badWorkBgIconImage badWorkBgIcon_10" title="Работа ведется в любое подходящее для исполнителя время. Ваши планы при этом не учитываются."></a>
+				<p>НЕ ОЧЕНЬ-ТО И РАБОЧИЙ ДЕНЬ</p>
+			</div>
+			<div class="badWorkBgIcon">
+				<a class="badWorkBgIconImage badWorkBgIcon_11" title="Рабочие советуют Вам покупать материалы у своих поставщиков, получая при этом вознаграждение. Качество, стоимость материалов и надежность поставщика принимается в расчет в последнюю очередь."></a>
+				<p>СКРЫТОЕ СОТРУДНИЧЕСТВО</p>
+			</div>
+			<div class="badWorkBgIcon">
+				<a class="badWorkBgIconImage badWorkBgIcon_12" title='Безымянные рабочие не расстроятся, если Вы оставите о них негативный отзыв. Для таких "специалистов" репутация не является тем фактором, о котором необходимо заботиться.'></a>
+				<p>АНОНИМУС С МАСТЕРКАМИ</p>
+			</div>
+		</div>
+	</div>
+	<div class="goodWorkerBlock"></div>
+	<div class="kuDyadyaKolyaBlock">
+		<div class="kuDyadyaKolya"></div>
+	</div>
+	<div class="realExampleBlock"></div>
+	<div class="bigLogoBlock"></div>
+	<div class="objectsBlock"></div>
+
+	<div class="forExampleBlock"></div>
+	<div class="freeConsultBg" style="padding: 160px 0 0 0;">
+		<div class="feedbackFormDiv" style="margin: 0 0 0 900px;">
+			<div class="smetaFormHeadText">
+				ОСТАВИТЬ ЗАЯВКУ
+			</div>
+			<form class="feedbackForm" method="post">
+				<input hidden="hidden" style="display: none;" name="feedbackAction" value="advice">
+				<div class="feedbackItemDiv">
+					<label>Имя:</label>
+					<input type="text" maxlength="18" name="feedbackName" id="feedbackName">
+				</div>
+				<div class="feedbackItemDiv">
+					<label>Тел:</label>
+					<input type="text" maxlength="20" name="feedbackPhone" class="feedbackPhone" id="feedbackPhone" style="margin-left: 15px;">
+				</div>
+				<button type="submit" class="feedbackSendButton" value="ОТПРАВИТЬ" onsubmit="yaCounter25089257.reachGoal('CLICK_FREEC'); return true;" >ОТПРАВИТЬ</button>
+			</form>
+		</div>
+	</div>
+	<div class="managerBlock"></div>
+
+	<div class="ourTeamBlock"></div>
+	<div class="ourWorkBlock"></div>
+	<div class="discountCardBlock"></div>
+	<div class="smetaBlockBg" style="padding: 160px 0 0 0;">
+		<div class="feedbackFormDiv" style="margin: 0 0 0 900px;">
+			<div class="smetaFormHeadText">
+				ОСТАВИТЬ ЗАЯВКУ
+			</div>
+			<form class="feedbackForm" method="post">
+				<input hidden="hidden" style="display: none;" name="feedbackAction" value="request">
+				<div class="feedbackItemDiv">
+					<label>Имя:</label>
+					<input type="text" maxlength="18" name="feedbackName" id="feedbackName">
+				</div>
+				<div class="feedbackItemDiv">
+					<label>Тел:</label>
+					<input type="text" maxlength="20" name="feedbackPhone" class="feedbackPhone" id="feedbackPhone" style="margin-left: 15px;">
+				</div>
+				<button type="submit" class="feedbackSendButton" value="ОТПРАВИТЬ" onsubmit="yaCounter25089257.reachGoal('CLICK_ZAMER'); return true;">ОТПРАВИТЬ</button>
+			</form>
+		</div>
+	</div>
+	<div class="ourAddressMapBlock"></div>
+	<div class="footerBgBlock"></div>
+
+	<script>
+		$('.feedbackSendButton').on('click', function (e) {
+			var form = $(this).parent('form');
+			feedbackName = form.find('#feedbackName').val();
+			feedbackPhone = form.find('#feedbackPhone').val();
+			feedbackAction = form.find('#feedbackAction').val();
+			if (feedbackName == '') {
+				feedbackErrorAlert('feedbackName');
+				return false;
+			}
+			if (feedbackPhone == '') {
+				feedbackErrorAlert('feedbackPhone');
+				return false;
+			}
+
+			$.post( "{{path('ajax_route')}}", { feedbackName: feedbackName, feedbackPhone: feedbackPhone, feedbackAction: feedbackAction })
+					.done(function( data ) {
+						data = $.parseJSON(data);
+						if (data.success) {
+							msg = data.msg;
+							alert(msg);
+							form.find('#feedbackName').val('');
+							form.find('#feedbackPhone').val('');
+						} else {
+							msg = data.errorMsg;
+							alert(msg);
+						}
+					});
+
+			return false;
+		});
+		function feedbackErrorAlert(item) {
+			switch (item) {
+				case 'feedbackName':
+					alert('Пожалуйста введите Имя!');
+					break;
+				case 'feedbackPhone':
+					alert('Пожалуйста введите Телефон!');
+					break;
+				default:
+					break
+			}
+		}
+	</script>
+{% endblock %}
