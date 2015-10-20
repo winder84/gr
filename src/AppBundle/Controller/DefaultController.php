@@ -57,8 +57,8 @@ class DefaultController extends Controller
             $message = wordwrap($message, 70, "\r\n");
 
             // Отправляем
-            mail('winder84@mail.ru', 'Сообщение с сайта "Городские ремонты" - "' . $requestItem .'"', $message);
-//            mail('winder84@mail.ru,gorodskieremonti@yandex.ru', 'Сообщение с сайта "Городские ремонты" - "' . $requestItem .'"', $message);
+//            mail('winder84@mail.ru', 'Сообщение с сайта "Городские ремонты" - "' . $requestItem .'"', $message);
+            mail('winder84@mail.ru,gorodskieremonti@yandex.ru', 'Сообщение с сайта "Городские ремонты" - "' . $requestItem .'"', $message);
             $response = new Response(json_encode(array(
                 'success' => 'true',
                 'msg' => 'Спасибо за оставленную заявку. Мы свяжемся с Вами в ближайшее время.'
