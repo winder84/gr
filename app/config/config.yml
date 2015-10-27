@@ -75,6 +75,8 @@ doctrine:
                     ApplicationSonataUserBundle: ~
                     SonataUserBundle: ~
                     FOSUserBundle: ~
+                    ApplicationSonataMediaBundle: ~
+                    SonataMediaBundle: ~
 #                    ApplicationSonataMediaBundle: ~
 #                    SonataMediaBundle: ~
 
@@ -125,3 +127,92 @@ sonata_admin:
         admin_permissions: [CREATE, LIST, DELETE, UNDELETE, EXPORT, OPERATOR, MASTER]
         # permission related to the objects
         object_permissions: [VIEW, EDIT, DELETE, UNDELETE, OPERATOR, MASTER, OWNER]
+
+sonata_formatter:
+    formatters:
+        markdown:
+            service: sonata.formatter.text.markdown
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+        #        - sonata.media.formatter.twig #keep this commented unless you are using media bundle.
+
+
+        text:
+            service: sonata.formatter.text.text
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+        #        - sonata.media.formatter.twig
+
+
+        rawhtml:
+            service: sonata.formatter.text.raw
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+        #        - sonata.media.formatter.twig
+
+
+        richhtml:
+            service: sonata.formatter.text.raw
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+        #        - sonata.media.formatter.twig
+
+
+        twig:
+            service: sonata.formatter.text.twigengine
+            extensions: [] # Twig formatter cannot have extensions
+
+
+sonata_media:
+    # if you don't use default namespace configuration
+    #class:
+    #    media: MyVendor\MediaBundle\Entity\Media
+    #    gallery: MyVendor\MediaBundle\Entity\Gallery
+    #    gallery_has_media: MyVendor\MediaBundle\Entity\GalleryHasMedia
+    default_context: default
+    db_driver: doctrine_orm # or doctrine_mongodb, doctrine_phpcr
+    contexts:
+        default:  # the default context is mandatory
+            providers:
+#                - sonata.media.provider.dailymotion
+                - sonata.media.provider.youtube
+                - sonata.media.provider.image
+#                - sonata.media.provider.file
+            formats:
+                preview:   { width: 100, quality: 100}
+                small:     { width: 200, quality: 100}
+                large:     { width: 600, quality: 100}
+
+    cdn:
+        server:
+            path: /uploads/media # http://media.sonata-project.org/
+
+    filesystem:
+        local:
+            directory:  %kernel.root_dir%/../web/uploads/media
+            create:     false
+    providers:
+        image:
+            resizer: sonata.media.resizer.square
+
+ivory_ck_editor:
+    default_config: default
+    configs:
+        default:
+            filebrowserBrowseRoute: admin_sonata_media_media_ckeditor_browser
+            filebrowserImageBrowseRoute: admin_sonata_media_media_ckeditor_browser
+            # Display images by default when clicking the image dialog browse button
+            filebrowserImageBrowseRouteParameters:
+                provider: sonata.media.provider.image
+            filebrowserUploadRoute: admin_sonata_media_media_ckeditor_upload
+            filebrowserUploadRouteParameters:
+                provider: sonata.media.provider.file
+            # Upload file as image when sending a file from the image dialog
+            filebrowserImageUploadRoute: admin_sonata_media_media_ckeditor_upload
+            filebrowserImageUploadRouteParameters:
+                provider: sonata.media.provider.image
+                context: my-context # Optional, to upload in a custom context
