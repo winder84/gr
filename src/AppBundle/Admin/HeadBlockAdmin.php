@@ -16,7 +16,6 @@ class HeadBlockAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('id')
             ->add('headTitle')
             ->add('headPhone')
             ->add('headEmail')
@@ -30,7 +29,6 @@ class HeadBlockAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->add('id')
             ->add('headTitle')
             ->add('headPhone')
             ->add('headEmail')

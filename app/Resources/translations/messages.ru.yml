@@ -4,9 +4,10 @@ Description : Описание
 Photos : Фотографии
 Client Seat : Должность
 Client Name : Имя клиента
+Client Photo : Фото клиента
+Work Medias : Галлерея
+Media : Медиа
 Cost : Цена
-Product Media: Галлерея
-Product List: Список оборудования
 Is Delete: Удалено
 Action: Действия
 move_to_bottom: Переместить в конец

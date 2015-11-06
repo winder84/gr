@@ -114,6 +114,8 @@ fos_user:
 sonata_admin:
     title:      Панель управления
     title_logo: bundles/app/images/headerLogo.png
+    templates:
+        short_object_description: AppBundle:Default:short-object-description.html.twig
     security:
         handler: sonata.admin.security.handler.acl
         # acl security information

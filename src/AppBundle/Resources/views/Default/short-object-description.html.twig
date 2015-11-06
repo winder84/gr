@@ -1,0 +1,12 @@
+<span>
+    {% if object.providerName is defined and object.providerName == 'sonata.media.provider.image' %}
+        <a href="{{ object.providerReference }}" target="new">{% thumbnail object, 'preview' %}</a>
+    {% else %}
+        <a href="{{ object.providerReference }}" target="new">{{ description }}</a>
+    {% endif %}
+</span>
+<style>
+	.form-group {
+		clear: both;
+	}
+</style>

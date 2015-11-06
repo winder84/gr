@@ -17,10 +17,8 @@ class WorkExampleAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('id')
             ->add('clientName')
             ->add('clientSeat')
-            ->add('description')
         ;
     }
 
@@ -30,10 +28,12 @@ class WorkExampleAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->add('id')
             ->add('clientName')
             ->add('clientSeat')
-            ->add('description')
+            ->add('clientPhoto', 'sonata_media_type', array(
+                'provider' => 'sonata.media.provider.image',
+                'template' => 'AppBundle:Default:image.preview.html.twig'
+            ))
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'edit' => array(),
@@ -51,11 +51,16 @@ class WorkExampleAdmin extends Admin
         $formMapper
             ->add('clientName')
             ->add('clientSeat')
-            ->add('description', 'ckeditor')
             ->add('clientPhoto', 'sonata_type_model_list', array(
                 'cascade_validation' => true,
                 'required' => false,
+            ), array(
+                'link_parameters' => array(
+                    'provider' => 'sonata.media.provider.image',
+                ),
+                'placeholder' => 'Фото клиента'
             ))
+            ->add('description', 'ckeditor')
             ->add('workMedias', 'sonata_type_collection', array(
                 'cascade_validation' => true,
                 'type_options' => array('delete' => false),
