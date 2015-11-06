@@ -4,3 +4,15 @@ services:
         arguments: [~, AppBundle\Entity\HeadBlock, SonataAdminBundle:CRUD]
         tags:
             - {name: sonata.admin, manager_type: orm, group: Контент, label: Шапка}
+
+    app.admin.work_example:
+        class: AppBundle\Admin\WorkExampleAdmin
+        arguments: [~, AppBundle\Entity\WorkExample, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Контент, label: Наши работы}
+
+    app.admin.product_has_media:
+        class: AppBundle\Admin\ProductHasMediaAdmin
+        arguments: [~, AppBundle\Entity\ProductHasMedia, AppBundle:ProductHasMediaAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Контент, label: Изображения, show_in_dashboard: false}
